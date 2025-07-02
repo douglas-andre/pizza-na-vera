@@ -108,10 +108,11 @@ query('.pizzaInfo--addButton').addEventListener('click', () => {
 function updateCart() {
     if (cart.length > 0) {
         query('aside').classList.add('show')
+        query('.cart').innerHTML = ''
         for (let i in cart) {
             let pizzaInfo = pizzaJson.find((item) => item.id == cart[i].id)
             let cartItem = query('.models .cart--item').cloneNode(true)
-
+            cartItem.querySelector('.cart--item-nome').innerHTML = pizzaInfo.name
 
             query('.cart').append(cartItem)
         }
