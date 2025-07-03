@@ -1,2 +1,2 @@
 # pizza-na-vera
-Projeto de loja de pizza
+Projeto de sistema de compra de pizza
